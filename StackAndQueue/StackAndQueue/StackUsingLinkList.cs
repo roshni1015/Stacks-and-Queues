@@ -29,17 +29,44 @@ namespace StackAndQueue
                 temp.link = top;
                 top = temp;
             }
-
+            count++;
         }
         public bool isEmpty()
         {
             return top == null;
         }
+        public int peek()
+        {
+            if (!isEmpty())
+            {
+                return top.data;
+            }
+            else
+            {
+                Console.WriteLine("Stack is Empty");
+                return -1;
+            }
+        }
+        public void pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack underflow");
+                return;
+            }
+            top = (top).link;
+            count--;
+        }
+        private int count = 0;
+        public int Count
+        {
+            get { return count; }
+        }
         public void display()
         {
             if (top == null)
             {
-                Console.Write("\nStack Underflow");
+                Console.WriteLine("Stack Underflow");
                 return;
             }
             else
