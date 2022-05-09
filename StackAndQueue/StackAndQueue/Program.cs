@@ -17,7 +17,6 @@ while (true)
             value.display();
             Console.WriteLine("\nTop element is {0} ", value.peek());
             Console.WriteLine("\n---------------------------------------------------- ");
-
             int length = value.Count;
             for (int i = 0; i < length; i++)
             {
@@ -34,6 +33,15 @@ while (true)
             Qvalue.enqueue(30);
             Console.Write("Queue Values are : ");
             Qvalue.display();
+            Console.Write("\n");
+            Console.WriteLine("Number of elements in Queue : " + Qvalue.Count);
+            Console.WriteLine("\n---------------------------------------------------- ");
+            int length1 = Qvalue.Count;
+            for (int i = 0; i < length1; i++)
+            {
+                Qvalue.dequeue();
+                Console.WriteLine("Number of elements in Queue after Dequeue method : " + Qvalue.Count);
+            }
             Console.WriteLine("\n***************************************************** ");
             break;
        default:

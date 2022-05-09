@@ -8,9 +8,9 @@ namespace StackAndQueue
 {
     public class QueueusingLinkList
     {
-       
-        int Count = 0;
-        QNode 
+
+        public int Count = 0;
+        QNode
         front, rear;
 
         public QueueusingLinkList()
@@ -19,9 +19,10 @@ namespace StackAndQueue
         }
         public void enqueue(int key)
         {
+            Count++;
             QNode temp = new QNode(key);
 
-            
+
             if (this.rear == null)
             {
                 this.front = this.rear = temp;
@@ -29,10 +30,26 @@ namespace StackAndQueue
             }
             this.rear.next = temp;
             this.rear = temp;
-            Count++;
 
         }
+        public void dequeue()
+        {
+            if (this.front == null)
+            {
+                return;
 
+            }
+
+
+            QNode temp = this.front;
+            this.front = this.front.next;
+
+
+            if (this.front == null)
+                this.rear = null;
+            Count--;
+
+        }
         public void display()
         {
             if (front == null)
@@ -52,4 +69,5 @@ namespace StackAndQueue
             }
         }
     }
+
 }
