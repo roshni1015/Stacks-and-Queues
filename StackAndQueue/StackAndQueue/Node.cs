@@ -11,5 +11,7 @@ namespace StackAndQueue
         public int data;
 
         public Node link;
+       
     }
+    
 }
