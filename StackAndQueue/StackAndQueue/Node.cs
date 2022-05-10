@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    public class Node
+    public class Node<M>
     {
-        public int data;
+        public M data;
 
-        public Node link;
-       
+        public Node<M> link;
+        public Node(M Key)
+        {
+            this.data = Key;
+            this.link = null;
+        }
+
+
     }
-    
 }
