@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    public class QueueusingLinkList
+    public class QueueusingLinkList<M>
     {
 
         public int Count = 0;
-        QNode
+        QNode<M>
         front, rear;
 
         public QueueusingLinkList()
         {
             this.front = this.rear = null;
         }
-        public void enqueue(int key)
+        public void enqueue(M Key)
         {
             Count++;
-            QNode temp = new QNode(key);
+            QNode<M> temp = new QNode<M>(Key);
 
 
             if (this.rear == null)
@@ -41,7 +41,7 @@ namespace StackAndQueue
             }
 
 
-            QNode temp = this.front;
+            QNode<M> temp = this.front;
             this.front = this.front.next;
 
 
@@ -59,7 +59,7 @@ namespace StackAndQueue
             }
             else
             {
-                QNode temp = front;
+                QNode<M> temp = front;
                 while (temp != null)
                 {
 
