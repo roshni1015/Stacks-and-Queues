@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    public class QNode
+    public class QNode<M>
     {
-        public int key;
-        public QNode next;
+        public M key;
+        public QNode<M> next;
 
-        public QNode(int key)
+        public QNode (M Key)
         {
-            this.key = key;
+            this.key = Key;
             this.next = null;
         }
     }
 }
+
+
+
 
 
