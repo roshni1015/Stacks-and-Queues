@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 using StackAndQueue;
 
 Console.WriteLine("Welcome to Stack And Queue!");
@@ -9,7 +9,7 @@ while (true)
     switch (option)
     {
         case 1:
-            StackUsingLinkList value = new StackUsingLinkList();
+            StackUsingLinkList<int> value = new StackUsingLinkList<int>();
             value.push(70);
             value.push(30);
             value.push(56);
@@ -27,7 +27,7 @@ while (true)
             Console.WriteLine("\n***************************************************** ");
             break;
         case 2:
-            QueueusingLinkList Qvalue = new QueueusingLinkList();
+            QueueusingLinkList<int> Qvalue = new QueueusingLinkList<int>();
             Qvalue.enqueue(56);
             Qvalue.enqueue(70);
             Qvalue.enqueue(30);
